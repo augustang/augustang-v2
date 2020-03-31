@@ -1,0 +1,856 @@
+$break-phone: 320px;
+$break-tablet: 850px;
+$break-desktop: 1200px;
+$break-desktop-2: 1500px;
+$break-desktop-3: 2000px;
+
+$light-blue: #71e1f2;
+$dark-blue: #007fff;
+$red: #ff4f30;
+$yellow: yellow;
+
+//fonts
+@font-face {
+    font-family: 'Beatrice-Medium';
+    src: url('../fonts/Beatrice-Medium.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Beatrice-Medium.woff2') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Beatrice-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+       /*url('Beatrice-Medium.ttf')  format('truetype'), Safari, Android, iOS */
+       url('../fonts/Beatrice-Medium.svg#svgBeatrice-Medium') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+}
+
+//regular styling
+
+body{
+    color: black;
+    font-family: "Beatrice-Medium", "Helvetica", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.copyright-1{
+    display: none;
+    @media screen and (min-width: $break-desktop) {
+        display: block;
+        color: white;
+        font-size: 10px;
+        letter-spacing: .5px;
+        margin: 0;
+        padding: 0 0 0 1em;
+        text-transform: uppercase;
+        z-index: 42;
+  }
+}
+
+.copyright-2{
+    color: white;
+    letter-spacing: .5px;
+    margin-top: 3em;
+    text-transform: uppercase;
+    z-index: 42;
+    @media screen and (min-width: $break-desktop) {
+        display: none;
+  }
+}
+
+
+h1{
+    font-size: 12px;
+    font-weight: normal;
+    @media screen and (min-width: $break-tablet) {
+    font-size: 14px;
+  }
+    @media screen and (min-width: $break-desktop) {
+    font-size: 16px;
+  }
+}
+
+h2{
+    font-size: 12px;
+    font-weight: normal;
+    @media screen and (min-width: $break-tablet) {
+    font-size: 14px;
+  }
+    @media screen and (min-width: $break-desktop) {
+    font-size: 16px;
+  }
+}
+
+h3{
+    font-size: 50px;
+    font-weight: normal;
+    line-height: 1.35;
+    @media screen and (min-width: $break-tablet) {
+        font-size: 80px;
+  }
+    @media screen and (min-width: $break-desktop) {
+        font-size: 100px;
+  }
+    @media screen and (min-width: $break-desktop-3) {
+        font-size: 120px;
+  }
+}
+
+h4{
+    font-weight: normal;
+}
+
+h5{
+    font-weight: normal;
+    font-size: 14px;
+    @media screen and (min-width: $break-tablet) {
+        font-size: 16px;
+  }
+    @media screen and (min-width: $break-desktop) {
+        font-size: 20px;
+  }
+    @media screen and (min-width: $break-desktop-3) {
+        font-size: 40px;
+  }
+}
+
+img{
+    max-width: 100%;
+}
+
+p{
+    font-size: 10px;
+    margin-bottom: 0;
+}
+
+.parent1{
+    padding-top: 60px;
+    @media screen and (min-width: $break-desktop-2) {
+    padding-top: 120px;
+  }
+}
+
+.project-container{
+    display: block;
+    margin: 30px 30px 120px 30px;
+    @media screen and (min-width: $break-desktop-2) {
+    margin: 30px 100px 200px 100px;
+  }
+    @media screen and (min-width: $break-desktop-3) {
+    margin: 30px 200px 300px 200px;
+  }
+}
+
+.project-title{
+    
+    @media screen and (min-width: $break-desktop) {
+        display: inline;
+        position: relative;
+  }
+}
+
+.thumbnail{
+    padding-bottom: 20vh;
+    margin-top: -35px;
+    position: relative;
+    z-index: -10;
+    @media screen and (min-width: $break-tablet) {
+        margin-top: -50px;
+  }
+    @media screen and (min-width: $break-desktop) {
+        display: none;
+        padding-bottom: 0;
+  }
+}
+
+//project page styling
+
+.arrow-right{
+    width: 10%;
+}
+
+.book-start{
+    display: grid;
+    grid-template-columns: 1fr 11.75fr;
+}
+
+.bottom-space{
+    margin-bottom: 60px;
+    @media screen and (min-width: $break-desktop) {
+    margin-bottom: 100px;
+  }
+    @media screen and (min-width: $break-desktop-2) {
+    margin-bottom: 120px;
+  }
+    @media screen and (min-width: $break-desktop-3) {
+        margin-bottom: 300px;
+  }
+}
+
+.cover{
+    margin: -35px 0 0 0;
+    position: relative;
+    z-index: -10;
+    @media screen and (min-width: $break-tablet) {
+        margin-top: -50px;
+  }
+    @media screen and (min-width: $break-desktop) {
+        margin-top: -60px;
+  }
+    @media screen and (min-width: $break-desktop-3) {
+        margin-top: -70px;
+  }
+}
+
+.full-img{
+    width: 100%;
+}
+
+.padded{
+    padding: 0 30px 0 30px;
+    @media screen and (min-width: $break-tablet) {
+        padding: 0 45px 0 45px;
+  }
+    @media screen and (min-width: $break-desktop) {
+        padding: 0 60px 0 60px;
+  }
+    @media screen and (min-width: $break-desktop-2) {
+        padding: 0 100px 0 100px;
+  }
+    @media screen and (min-width: $break-desktop-3) {
+        padding: 0 200px 0 200px;
+  }
+}
+.padded-title{
+    padding: 0 0 0 30px;
+    @media screen and (min-width: $break-desktop-2) {
+        padding: 0 0 0 100px;
+  }
+    @media screen and (min-width: $break-desktop-3) {
+        padding: 0 0 0 200px;
+  }
+}
+.photo-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.photo-grid-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5em;
+}
+
+.left-item{
+    padding-right: 60px;
+    @media screen and (min-width: $break-tablet) {
+        padding-right: 120px;
+  }
+    @media screen and (min-width: $break-desktop) {
+        padding-right: 200px;
+  }
+    @media screen and (min-width: $break-desktop-2) {
+        padding-right: 300px;
+  }
+    @media screen and (min-width: $break-desktop-3) {
+        padding-right: 400px;
+  }
+}
+
+.right-item{
+    padding-left: 60px;
+    @media screen and (min-width: $break-tablet) {
+        padding-left: 120px;
+  }
+    @media screen and (min-width: $break-desktop) {
+        padding-left: 200px;
+  }
+    @media screen and (min-width: $break-desktop-2) {
+        padding-left: 300px;
+  }
+    @media screen and (min-width: $break-desktop-3) {
+        padding-left: 400px;
+  }
+}
+
+.proj-categories{
+    align-items: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 0 30px 30px;
+    p{
+        font-size: 10px;
+        letter-spacing: .12px;
+        line-height: 2.2;
+        text-transform: uppercase;
+    }
+    @media screen and (min-width: $break-tablet) {
+        margin-top: 60px;
+        margin-bottom: 120px;
+        padding-left: 90px;
+        padding-right: 0;
+        grid-template-columns: 1fr;
+  }
+    @media screen and (min-width: $break-desktop) {
+        line-height: 0;
+        padding-left: 170px;
+        padding-right: 0;
+        p{
+            font-size: 12px;
+        }
+  }
+    @media screen and (min-width: $break-desktop-2) {
+        padding-left: 270px;
+  }
+    @media screen and (min-width: $break-desktop-3) {
+        padding-left: 370px;
+  }
+}
+
+.proj-description{
+    p{
+        font-size: 16px;
+        line-height: 1.7;
+        margin: 0 0 0 30px;
+    }
+    @media screen and (min-width: $break-tablet) {
+        margin-top: 60px;
+        margin-right: 60px;
+  }
+    @media screen and (min-width: $break-desktop-2) {
+        width: 70%;
+  }
+    @media screen and (min-width: $break-desktop-3) {
+        width: 50%;
+  }
+}
+
+.proj-words{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    @media screen and (min-width: $break-tablet) {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+  }
+    @media screen and (min-width: $break-tablet) {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: start;
+  }
+    @media screen and (min-width: $break-desktop-2) {
+        grid-template-columns: 1fr 3fr;
+  }
+}
+
+.proj-wrapper{
+    margin-top: 30px;
+}
+
+.small-text{
+    font-size: 10px;
+    margin: -120px 0 120px 0;
+    text-transform: uppercase;
+    @media screen and (min-width: $break-desktop) {
+        margin-top: -20px;
+  }
+}
+
+.next-project{
+    display: flex;
+    margin-top: 120px;
+}
+
+.next-project-name{
+    width: 40%;
+    @media screen and (min-width: $break-desktop) {
+        width: 100%;
+    }
+}
+
+.next-project-arrow{
+    padding-top: 8px;
+    width: 75px;
+    @media screen and (min-width: $break-tablet) {
+        padding-top: 16px;
+        width: 90px;
+    }
+    @media screen and (min-width: $break-desktop) {
+        margin-left: -500px;
+        padding-top: 24px;
+        width: 120px;
+    }
+    @media screen and (min-width: $break-desktop-2) {
+        margin-left: -900px;
+  }
+    @media screen and (min-width: $break-desktop-3) {
+        margin-left: -1300px;
+        padding-top: 30px;
+        width: 150px;
+  }
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.visit-site{
+    font-size: 10px;
+    margin: 0 0 120px 0;
+    text-transform: uppercase;
+}
+
+.webpage-link{
+    font-size: 30px;
+    text-decoration: underline;
+    @media screen and (min-width: $break-tablet) {
+        font-size: 50px;
+  }
+    @media screen and (min-width: $break-tablet) {
+        font-size: 80px;
+  }
+}
+
+//about page styling
+.about-container{
+    margin: 30px 30px 120px 30px;
+    @media screen and (min-width: $break-desktop-2) {
+    margin-top: 60px;
+  }
+    @media screen and (min-width: $break-desktop-2) {
+    margin: 70px 100px 200px 100px;
+  }
+    @media screen and (min-width: $break-desktop-3) {
+    margin: 80px 200px 300px 200px;
+  }
+}
+
+.about-content{
+    padding-top: 1.8em;
+}
+
+.block{
+    padding-top: 60px;
+    @media screen and (min-width: $break-tablet) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.block-2{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.block-items{
+    p{
+        font-size: 10px;
+        @media screen and (min-width: $break-tablet) {
+            font-size: 12px;
+      }
+        @media screen and (min-width: $break-desktop-2) {
+            font-size: 14px;
+      }
+        @media screen and (min-width: $break-desktop-3) {
+            font-size: 14px;
+      }
+    }
+}
+
+.bottom-space-2{
+    margin-bottom: 30px;
+    @media screen and (min-width: $break-desktop) {
+    margin-bottom: 50px;
+  }
+    @media screen and (min-width: $break-desktop-2) {
+    margin-bottom: 60px;
+  }
+    @media screen and (min-width: $break-desktop-3) {
+        margin-bottom: 80px;
+  }
+}
+
+.item{
+    margin: 1em 0 1em 0;
+}
+
+.item-top{
+    margin: .25em 0 1em 0;
+}
+
+.width{
+    width: 65%;
+    @media screen and (min-width: $break-desktop-2) {
+        width: 100%;
+    }
+}
+
+.width-2{
+    width: 80%;
+    @media screen and (min-width: $break-desktop-2) {
+        width: 100%;
+    }
+}
+
+.width-3{
+    @media screen and (min-width: $break-desktop) {
+        width: 60%;
+    }
+}
+
+.year{
+    size: 10px;
+    text-transform: uppercase;
+}
+
+//navigation
+#button{
+    background: none;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 24px 0 0;
+    padding: 0 1em 0 1em;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    transition-property: color, background-color;
+    vertical-align: middle;
+    white-space: nowrap;
+    &:hover{
+        background: #FF4F30;
+        animation: easeInOut 1s;
+    }
+    .addwhite{
+        border: 1px solid white;
+        color: white;
+    }
+    
+}
+
+.menu{
+    display: flex;
+    height: 35px;
+    justify-content: space-between;
+    line-height: 35px;
+    padding-right: 30px;
+    margin: 30px;
+    opacity: 0;
+    position: fixed;
+    top: -50px;
+    width: 100%;
+    z-index: 100;
+    @media screen and (min-width: $break-desktop-2) {
+        padding-right: 70px;
+        padding-left: 70px;
+        margin-top: 50px;
+  }
+    
+    @media screen and (min-width: $break-desktop-3) {
+        padding-right: 170px;
+        padding-left: 170px;
+        margin-top: 60px;
+  }
+}
+.addwhite{
+    transition: all 1s ease-in-out;
+}
+
+.white{
+    color: white;
+    transition: all 1s ease-in-out;
+}
+
+.menu-bar-container {
+    cursor: pointer;
+    padding: 7.5px 0 0 0;
+}
+
+.bar1, .bar3 {
+    width: 20px;
+    height: 1px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+
+.change .bar1 {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 5px);
+    width: 35px;
+}
+
+.change .bar3 {
+    background-color: white;
+    transform: rotate(45deg) translate(0px, -4px);
+    width: 35px;
+}
+
+.nav{
+    display: flex;
+    margin-right: 30px;
+}
+
+//menu window
+.menu-window{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    left: 0;
+    margin: 0;
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    width: 100%;
+    z-index: 50;
+    a{
+        color: white;
+    }
+    @media screen and (min-width: $break-tablet) {
+        align-items: flex-end;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+  }
+    @media screen and (min-width: $break-desktop-2) {
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 80px;
+  }
+    @media screen and (min-width: $break-desktop-3) {
+        padding-left: 200px;
+        padding-right: 200px;
+        padding-bottom: 100px;
+  }
+}
+
+.menu-item{
+    opacity: 0;
+    top: 100vh;
+    /*position: relative;
+    visibility: hidden;*/
+}
+
+.menu-item-2{
+    opacity: 1;
+    position: relative;
+    top: 0;
+}
+
+.big-link {
+    padding-top: 60px;
+    @media screen and (min-width: $break-tablet) {
+        padding-top: 80px;    
+        margin-top: 0;
+        }
+    h4{
+        font-size: 50px;
+        margin: 0;
+        @media screen and (min-width: $break-tablet) {
+            font-size: 150px;
+            line-height: 1.3;
+        }
+        @media screen and (min-width: $break-desktop) {
+            font-size: 140px;
+        }
+    }
+}
+
+.small-link {
+    margin-bottom: 6em;
+    @media screen and (min-width: $break-tablet) {
+            margin-bottom: 1.2em;
+        }
+    p{
+        font-size: 16px;
+        line-height: 2;
+        @media screen and (min-width: $break-tablet) {
+            font-size: 14px;
+            line-height: 2;
+        }
+        @media screen and (min-width: $break-desktop) {
+            font-size: 12px;
+            line-height: 2;
+            margin-right: 9.35em;
+        }
+    }
+}
+
+//footer styles
+.footer-window{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    padding: 30px;
+    width: 100%;
+    z-index: 40;
+    a{
+        color: white;
+    }
+    @media screen and (min-width: $break-tablet) {
+        align-items: flex-end;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+  }
+    @media screen and (min-width: $break-desktop-2) {
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 80px;
+  }
+    @media screen and (min-width: $break-desktop-3) {
+        padding-left: 200px;
+        padding-right: 200px;
+        padding-bottom: 100px;
+  }
+}
+
+.footer-big-link {
+    padding-top: 80px;
+    @media screen and (min-width: $break-tablet) {
+        padding-top: 80px;    
+        margin-top: 0;
+        }
+    h4{
+        font-size: 50px;
+        margin: 0;
+        @media screen and (min-width: $break-tablet) {
+            font-size: 150px;
+            line-height: 1.3;
+        }
+        @media screen and (min-width: $break-desktop) {
+            font-size: 140px;
+        }
+    }
+}
+
+.footer-small-link{
+    margin-bottom: 2em;
+    @media screen and (min-width: $break-tablet) {
+            margin-bottom: 3em;
+        }
+    p{
+        font-size: 16px;
+        line-height: 2;
+        @media screen and (min-width: $break-tablet) {
+            font-size: 14px;
+            line-height: 2;
+        }
+        @media screen and (min-width: $break-desktop) {
+            font-size: 12px;
+            line-height: 2;
+            margin-right: 9.35em;
+        }
+    }
+}
+
+
+//animations
+.fade-in {
+  animation: fadeIn ease 2s;
+}
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+//follow
+.container {
+    opacity: 1;
+    position: relative;
+    visibility: hidden;
+    z-index: 5;
+    @media screen and (max-width: $break-tablet) {
+    margin-bottom: 60px;
+  }
+    @media screen and (max-width: $break-desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.follower {
+    width: 10rem;
+    height: 5rem;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none; /* Very important to prevent the follower from messing up with the mouse move */
+    
+    @media screen and (max-width: $break-phone) {
+    display: none;
+  }
+}
+
+.follower > * {
+    margin: auto;
+}
+
+.hide-me{
+    display: none;
+}
+
+//tangy shit
+.tangy{
+    background-color: $light-blue;
+    h1{
+        color: $dark-blue;
+    }
+    h2{
+        color: $dark-blue;
+    }
+    h3{
+        color: $dark-blue;
+    }
+    h4{
+        color: $dark-blue;
+    }
+    h5{
+        color: $dark-blue;
+    }
+    p{
+        color: $dark-blue;
+    }
+    a{
+        color: $yellow;
+    }
+    .bar1, .bar3 {
+    background-color: $dark-blue;
+    }
+    #button{
+        border: 1px solid $dark-blue;
+    }
+    .footer-window{
+        background-color: $red;
+    }
+    .menu-window{
+        background-color: $yellow;
+    }
+}
