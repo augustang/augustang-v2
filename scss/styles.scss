@@ -168,6 +168,14 @@ p{
   }
 }
 
+.two-column {
+    @media screen and (min-width: $break-tablet) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 60px;
+  }
+}
+
 .thumbnail{
     padding-bottom: 20vh;
     margin-top: -35px;
