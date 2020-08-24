@@ -133,8 +133,8 @@ var tl = new TimelineMax ({
 
 tl.to('.menu-window', .5, {top: 0, scaleY: 1, height: '100vh', ease: Power3.easeOut,});
 tl.staggerTo('.menu-item', 1, {opacity: 1, y: 0,}, .1);
-/*tl.staggerFrom('.menu-item', 1.5, { top: '100vh', opacity: 0, ease: Power4.easeOut,}, 0.1, '-=.3');
-tl.staggerFrom('.menu-item-2', 1.5, {top: '100vh', opacity: 0, ease: Power4.easeOut,}, 0.1, '-=1.25');*/
+/*tl.staggerFrom('.menu-item', 1.5, { top: '100vh', opacity: 0, ease: Power4.easeOut,}, 0.1, '-=.3');*/
+tl.staggerFrom('.menu-item-2', 1.5, {top: '100vh', opacity: 0, ease: Power4.easeOut,}, 0.1, '-=1.25');
 tl.reversed(true);
 
 $('#menu-button').click(function() {

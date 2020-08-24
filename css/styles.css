@@ -101,11 +101,11 @@ p {
   font-size: 10px;
   margin-bottom: 0; }
 
-.parent1 {
-  padding-top: 60px; }
+.top-spacing {
+  height: 60px; }
   @media screen and (min-width: 1500px) {
-    .parent1 {
-      padding-top: 120px; } }
+    .top-spacing {
+      height: 120px; } }
 
 .project-container {
   display: block;

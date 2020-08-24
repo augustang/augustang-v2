@@ -131,10 +131,10 @@ p{
     margin-bottom: 0;
 }
 
-.parent1{
-    padding-top: 60px;
+.top-spacing{
+    height: 60px;
     @media screen and (min-width: $break-desktop-2) {
-    padding-top: 120px;
+    height: 120px;
   }
 }
 
