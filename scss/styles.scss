@@ -122,6 +122,17 @@ h5{
   }
 }
 
+h6 {
+    font-weight: normal;
+    font-size: 18px;
+    @media screen and (min-width: $break-tablet) {
+        font-size: 24px;
+  }
+    @media screen and (min-width: $break-desktop) {
+        font-size: 32px;
+  }
+}
+
 img{
     max-width: 100%;
 }
@@ -443,6 +454,7 @@ p{
 
 .about-content{
     padding-top: 1.8em;
+    height: 100vh;
 }
 
 .block{

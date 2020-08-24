@@ -94,6 +94,16 @@ h5 {
     h5 {
       font-size: 40px; } }
 
+h6 {
+  font-weight: normal;
+  font-size: 18px; }
+  @media screen and (min-width: 850px) {
+    h6 {
+      font-size: 24px; } }
+  @media screen and (min-width: 1200px) {
+    h6 {
+      font-size: 32px; } }
+
 img {
   max-width: 100%; }
 
@@ -403,7 +413,8 @@ p {
       margin: 80px 200px 300px 200px; } }
 
 .about-content {
-  padding-top: 1.8em; }
+  padding-top: 1.8em;
+  height: 100vh; }
 
 .block {
   padding-top: 60px; }
