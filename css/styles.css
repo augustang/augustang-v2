@@ -1,9 +1,7 @@
 @font-face {
   font-family: "Beatrice-Medium";
-  src: url("../fonts/Beatrice-Medium.eot");
-  /* IE9 Compat Modes */
-  src: url("../fonts/Beatrice-Medium.woff2") format("embedded-opentype"), url("webfont.woff2") format("woff2"), url("../fonts/Beatrice-Medium.woff") format("woff"), url("../fonts/Beatrice-Medium.svg#svgBeatrice-Medium") format("svg");
-  /* Legacy iOS */
+  src: url("../fonts/Beatrice-Medium.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/Beatrice-Medium.woff2") format("embedded-opentype"), url("webfont.woff2") format("woff2"), url("../fonts/Beatrice-Medium.woff") format("woff"), url("../fonts/Beatrice-Medium.svg#svgBeatrice-Medium") format("svg"); /* Legacy iOS */
   font-style: normal;
   font-weight: normal;
 }
@@ -194,8 +192,8 @@ p {
 }
 
 .thumbnail {
-  padding-bottom: 20vh;
-  margin-top: -35px;
+  padding-bottom: 80px;
+  margin-top: -30px;
   position: relative;
   z-index: -10;
 }
@@ -417,7 +415,7 @@ p {
 .proj-description p {
   font-size: 16px;
   line-height: 1.7;
-  margin: 0 0 0 30px;
+  margin: 0 0 10px 30px;
 }
 @media screen and (min-width: 850px) {
   .proj-description {
@@ -529,8 +527,7 @@ p {
 
 .videoWrapper {
   position: relative;
-  padding-bottom: 56.25%;
-  /* 16:9 */
+  padding-bottom: 56.25%; /* 16:9 */
   padding-top: 25px;
   height: 0;
 }
@@ -1070,8 +1067,7 @@ p {
   position: absolute;
   left: 0;
   top: 0;
-  pointer-events: none;
-  /* Very important to prevent the follower from messing up with the mouse move */
+  pointer-events: none; /* Very important to prevent the follower from messing up with the mouse move */
 }
 @media screen and (max-width: 320px) {
   .follower {

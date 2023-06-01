@@ -177,8 +177,8 @@ p{
 }
 
 .thumbnail{
-    padding-bottom: 20vh;
-    margin-top: -35px;
+    padding-bottom: 80px;
+    margin-top: -30px;
     position: relative;
     z-index: -10;
     @media screen and (min-width: $break-tablet) {
@@ -337,7 +337,7 @@ p{
     p{
         font-size: 16px;
         line-height: 1.7;
-        margin: 0 0 0 30px;
+        margin: 0 0 10px 30px;
     }
     @media screen and (min-width: $break-tablet) {
         margin-top: 60px;
