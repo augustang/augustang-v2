@@ -161,7 +161,6 @@ $('#menu-button').click(function() {
 
     }
     $('.addwhite').toggleClass('white');
-    $('.addwhite-2').toggleClass('white-2');
 
 });
 

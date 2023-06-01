@@ -5,28 +5,31 @@ $break-desktop-2: 1500px;
 $break-desktop-3: 2000px;
 
 $light-blue: #71e1f2;
-$dark-blue: #007fff;
-$red: #ff4f30;
-$yellow: yellow;
+$dark-blue: #0500F4;
+$red: #FF6AD5;
+$yellow: #ffff33;
 
 //fonts
 @font-face {
-    font-family: 'Beatrice-Medium';
-    src: url('../fonts/Beatrice-Medium.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/Beatrice-Medium.woff2') format('embedded-opentype'), /* IE6-IE8 */
-       url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/Beatrice-Medium.woff') format('woff'), /* Pretty Modern Browsers */
-       /*url('Beatrice-Medium.ttf')  format('truetype'), Safari, Android, iOS */
-       url('../fonts/Beatrice-Medium.svg#svgBeatrice-Medium') format('svg'); /* Legacy iOS */
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'MonumentGrotesk-Regular';
+    src: url("../fonts/MonumentGrotesk-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'EditorialNew-Light';
+    src: url("../fonts/EditorialNew-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Ofform-Regular';
+    src: url("../fonts/Ofform-Regular.otf") format("opentype");
 }
 
 //regular styling
 
 body{
     color: black;
-    font-family: "Beatrice-Medium", "Helvetica", sans-serif;
+    font-family: "MonumentGrotesk-Regular", "Helvetica", sans-serif;
     font-weight: normal;
     font-style: normal;
     text-rendering: optimizeLegibility;
@@ -68,6 +71,7 @@ a{
 
 
 h1{
+    font-family: "MonumentGrotesk-Regular", "Helvetica", sans-serif;
     font-size: 12px;
     font-weight: normal;
     @media screen and (min-width: $break-tablet) {
@@ -79,32 +83,38 @@ h1{
 }
 
 h2{
-    font-size: 12px;
+    font-family: "MonumentGrotesk-Regular", "Helvetica", sans-serif;
+    font-size: 9px;
     font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: .03rem;
     @media screen and (min-width: $break-tablet) {
-    font-size: 14px;
+    font-size: 11px;
   }
     @media screen and (min-width: $break-desktop) {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
 h3{
+    font-family: "EditorialNew-Light", "Helvetica", sans-serif;
     font-size: 50px;
     font-weight: normal;
-    line-height: 1.35;
+    line-height: 1;
     @media screen and (min-width: $break-tablet) {
-        font-size: 80px;
-  }
-    @media screen and (min-width: $break-desktop) {
         font-size: 100px;
   }
+    @media screen and (min-width: $break-desktop) {
+        font-size: 160px;
+        line-height: 1.1;
+  }
     @media screen and (min-width: $break-desktop-3) {
-        font-size: 120px;
+        font-size: 200px;
   }
 }
 
 h4{
+    font-family: "EditorialNew-Light", "Helvetica", sans-serif;
     font-weight: normal;
 }
 
@@ -178,7 +188,7 @@ p{
 
 .thumbnail{
     padding-bottom: 80px;
-    margin-top: -30px;
+    margin-top: -24px;
     position: relative;
     z-index: -10;
     @media screen and (min-width: $break-tablet) {
@@ -215,7 +225,7 @@ p{
 }
 
 .cover{
-    margin: -35px 0 0 0;
+    margin: -24px 0 0 0;
     position: relative;
     z-index: -10;
     @media screen and (min-width: $break-tablet) {
@@ -335,8 +345,8 @@ p{
 
 .proj-description{
     p{
-        font-size: 16px;
-        line-height: 1.7;
+        font-size: 20px;
+        line-height: 1.5;
         margin: 0 0 10px 30px;
     }
     @media screen and (min-width: $break-tablet) {
@@ -373,7 +383,8 @@ p{
 }
 
 .small-text{
-    font-size: 10px;
+    font-size: 12px;
+    letter-spacing: .03rem;
     margin: -120px 0 120px 0;
     text-transform: uppercase;
     @media screen and (min-width: $break-desktop) {
@@ -430,12 +441,15 @@ p{
 }
 
 .visit-site{
-    font-size: 10px;
+    font-size: 12px;
+    letter-spacing: .03rem;
     margin: 0 0 120px 0;
     text-transform: uppercase;
 }
 
 .webpage-link{
+    font-family: "EditorialNew-Light", "Helvetica", sans-serif;
+    font-weight: normal;
     font-size: 30px;
     text-decoration: underline;
     @media screen and (min-width: $break-tablet) {
@@ -555,8 +569,8 @@ p{
     vertical-align: middle;
     white-space: nowrap;
     &:hover{
-        background: #FF4F30;
-        animation: easeInOut 1s;
+        background: $red;
+        animation: easeInOut;
     }
     .addwhite{
         border: 1px solid white;
@@ -790,7 +804,7 @@ p{
 
 //animations
 .fade-in {
-  animation: fadeIn ease 2s;
+  animation: fadeIn ease 1s;
 }
 @keyframes fadeIn{
   0% {
@@ -840,25 +854,39 @@ p{
 //tangy shit
 .tangy{
     background-color: $light-blue;
+    
     h1{
+        font-family: "Ofform-Regular", "Helvetica", sans-serif;
         color: $dark-blue;
     }
     h2{
+        font-family: "Ofform-Regular", "Helvetica", sans-serif;
         color: $dark-blue;
     }
     h3{
+        font-family: "Ofform-Regular", "Helvetica", sans-serif;
+        line-height: .6;
+        padding-bottom: 4rem;
         color: $dark-blue;
     }
     h4{
+        font-family: "Ofform-Regular", "Helvetica", sans-serif;
         color: $dark-blue;
     }
     h5{
+        font-family: "Ofform-Regular", "Helvetica", sans-serif;
+        color: $dark-blue;
+    }
+    h6{
+        font-family: "Ofform-Regular", "Helvetica", sans-serif;
         color: $dark-blue;
     }
     p{
+        font-family: "Ofform-Regular", "Helvetica", sans-serif;
         color: $dark-blue;
     }
     a{
+        font-family: "Ofform-Regular", "Helvetica", sans-serif;
         color: $yellow;
     }
     .bar1, .bar3 {
@@ -866,6 +894,17 @@ p{
     }
     #button{
         border: 1px solid $dark-blue;
+        color: $dark-blue;
+        cursor: pointer;
+        display: inline-block;
+        &:hover{
+            background: $red;
+            animation: easeInOut;
+        }
+        .addwhite{
+            border: 1px solid $dark-blue;
+            color: $dark-blue;
+        }
     }
     .footer-window{
         background-color: $red;
@@ -873,4 +912,5 @@ p{
     .menu-window{
         background-color: $yellow;
     }
+    
 }

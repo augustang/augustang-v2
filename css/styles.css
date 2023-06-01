@@ -1,13 +1,18 @@
 @font-face {
-  font-family: "Beatrice-Medium";
-  src: url("../fonts/Beatrice-Medium.eot"); /* IE9 Compat Modes */
-  src: url("../fonts/Beatrice-Medium.woff2") format("embedded-opentype"), url("webfont.woff2") format("woff2"), url("../fonts/Beatrice-Medium.woff") format("woff"), url("../fonts/Beatrice-Medium.svg#svgBeatrice-Medium") format("svg"); /* Legacy iOS */
-  font-style: normal;
-  font-weight: normal;
+  font-family: "MonumentGrotesk-Regular";
+  src: url("../fonts/MonumentGrotesk-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "EditorialNew-Light";
+  src: url("../fonts/EditorialNew-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Ofform-Regular";
+  src: url("../fonts/Ofform-Regular.otf") format("opentype");
 }
 body {
   color: black;
-  font-family: "Beatrice-Medium", "Helvetica", sans-serif;
+  font-family: "MonumentGrotesk-Regular", "Helvetica", sans-serif;
   font-weight: normal;
   font-style: normal;
   text-rendering: optimizeLegibility;
@@ -52,6 +57,7 @@ a:hover {
 }
 
 h1 {
+  font-family: "MonumentGrotesk-Regular", "Helvetica", sans-serif;
   font-size: 12px;
   font-weight: normal;
 }
@@ -67,42 +73,48 @@ h1 {
 }
 
 h2 {
-  font-size: 12px;
+  font-family: "MonumentGrotesk-Regular", "Helvetica", sans-serif;
+  font-size: 9px;
   font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.03rem;
 }
 @media screen and (min-width: 850px) {
   h2 {
-    font-size: 14px;
+    font-size: 11px;
   }
 }
 @media screen and (min-width: 1200px) {
   h2 {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
 h3 {
+  font-family: "EditorialNew-Light", "Helvetica", sans-serif;
   font-size: 50px;
   font-weight: normal;
-  line-height: 1.35;
+  line-height: 1;
 }
 @media screen and (min-width: 850px) {
-  h3 {
-    font-size: 80px;
-  }
-}
-@media screen and (min-width: 1200px) {
   h3 {
     font-size: 100px;
   }
 }
+@media screen and (min-width: 1200px) {
+  h3 {
+    font-size: 160px;
+    line-height: 1.1;
+  }
+}
 @media screen and (min-width: 2000px) {
   h3 {
-    font-size: 120px;
+    font-size: 200px;
   }
 }
 
 h4 {
+  font-family: "EditorialNew-Light", "Helvetica", sans-serif;
   font-weight: normal;
 }
 
@@ -193,7 +205,7 @@ p {
 
 .thumbnail {
   padding-bottom: 80px;
-  margin-top: -30px;
+  margin-top: -24px;
   position: relative;
   z-index: -10;
 }
@@ -240,7 +252,7 @@ p {
 }
 
 .cover {
-  margin: -35px 0 0 0;
+  margin: -24px 0 0 0;
   position: relative;
   z-index: -10;
 }
@@ -413,8 +425,8 @@ p {
 }
 
 .proj-description p {
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 20px;
+  line-height: 1.5;
   margin: 0 0 10px 30px;
 }
 @media screen and (min-width: 850px) {
@@ -469,7 +481,8 @@ p {
 }
 
 .small-text {
-  font-size: 10px;
+  font-size: 12px;
+  letter-spacing: 0.03rem;
   margin: -120px 0 120px 0;
   text-transform: uppercase;
 }
@@ -541,12 +554,15 @@ p {
 }
 
 .visit-site {
-  font-size: 10px;
+  font-size: 12px;
+  letter-spacing: 0.03rem;
   margin: 0 0 120px 0;
   text-transform: uppercase;
 }
 
 .webpage-link {
+  font-family: "EditorialNew-Light", "Helvetica", sans-serif;
+  font-weight: normal;
   font-size: 30px;
   text-decoration: underline;
 }
@@ -699,9 +715,9 @@ p {
   white-space: nowrap;
 }
 #button:hover {
-  background: #FF4F30;
-  -webkit-animation: easeInOut 1s;
-          animation: easeInOut 1s;
+  background: #FF6AD5;
+  -webkit-animation: easeInOut;
+          animation: easeInOut;
 }
 #button .addwhite {
   border: 1px solid white;
@@ -1020,8 +1036,8 @@ p {
 }
 
 .fade-in {
-  -webkit-animation: fadeIn ease 2s;
-          animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 1s;
+          animation: fadeIn ease 1s;
 }
 
 @-webkit-keyframes fadeIn {
@@ -1087,35 +1103,60 @@ p {
   background-color: #71e1f2;
 }
 .tangy h1 {
-  color: #007fff;
+  font-family: "Ofform-Regular", "Helvetica", sans-serif;
+  color: #0500F4;
 }
 .tangy h2 {
-  color: #007fff;
+  font-family: "Ofform-Regular", "Helvetica", sans-serif;
+  color: #0500F4;
 }
 .tangy h3 {
-  color: #007fff;
+  font-family: "Ofform-Regular", "Helvetica", sans-serif;
+  line-height: 0.6;
+  padding-bottom: 4rem;
+  color: #0500F4;
 }
 .tangy h4 {
-  color: #007fff;
+  font-family: "Ofform-Regular", "Helvetica", sans-serif;
+  color: #0500F4;
 }
 .tangy h5 {
-  color: #007fff;
+  font-family: "Ofform-Regular", "Helvetica", sans-serif;
+  color: #0500F4;
+}
+.tangy h6 {
+  font-family: "Ofform-Regular", "Helvetica", sans-serif;
+  color: #0500F4;
 }
 .tangy p {
-  color: #007fff;
+  font-family: "Ofform-Regular", "Helvetica", sans-serif;
+  color: #0500F4;
 }
 .tangy a {
-  color: yellow;
+  font-family: "Ofform-Regular", "Helvetica", sans-serif;
+  color: #ffff33;
 }
 .tangy .bar1, .tangy .bar3 {
-  background-color: #007fff;
+  background-color: #0500F4;
 }
 .tangy #button {
-  border: 1px solid #007fff;
+  border: 1px solid #0500F4;
+  color: #0500F4;
+  cursor: pointer;
+  display: inline-block;
+}
+.tangy #button:hover {
+  background: #FF6AD5;
+  -webkit-animation: easeInOut;
+          animation: easeInOut;
+}
+.tangy #button .addwhite {
+  border: 1px solid #0500F4;
+  color: #0500F4;
 }
 .tangy .footer-window {
-  background-color: #ff4f30;
+  background-color: #FF6AD5;
 }
 .tangy .menu-window {
-  background-color: yellow;
+  background-color: #ffff33;
 }
