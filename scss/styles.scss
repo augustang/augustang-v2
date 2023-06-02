@@ -153,10 +153,7 @@ p{
 }
 
 .top-spacing{
-    height: 60px;
-    @media screen and (min-width: $break-desktop-2) {
     height: 120px;
-  }
 }
 
 .project-container{
@@ -277,8 +274,9 @@ p{
     grid-gap: 5em;
 }
 
+
 .left-item{
-    padding-right: 60px;
+    padding-right: 30px;
     @media screen and (min-width: $break-tablet) {
         padding-right: 120px;
   }
@@ -294,7 +292,7 @@ p{
 }
 
 .right-item{
-    padding-left: 60px;
+    padding-left: 30px;
     @media screen and (min-width: $break-tablet) {
         padding-left: 120px;
   }
@@ -309,11 +307,13 @@ p{
   }
 }
 
+
 .proj-categories{
     align-items: start;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 0 30px 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 0 10px 30px;
+    width: 100%;
     p{
         font-size: 10px;
         letter-spacing: .12px;
@@ -321,8 +321,7 @@ p{
         text-transform: uppercase;
     }
     @media screen and (min-width: $break-tablet) {
-        margin-top: 60px;
-        margin-bottom: 120px;
+        margin: 60px 0 120px 30px;
         padding-left: 90px;
         padding-right: 0;
         grid-template-columns: 1fr;
@@ -345,16 +344,18 @@ p{
 
 .proj-description{
     p{
-        font-size: 20px;
-        line-height: 1.5;
-        margin: 0 0 10px 30px;
+        font-size: 30px;
+        line-height: 1.4;
+        margin: 0 0 10px 0;
+        width: 100%
     }
     @media screen and (min-width: $break-tablet) {
-        margin-top: 60px;
-        margin-right: 60px;
+        p{
+        margin: 0 0 30px 0;
+    }
   }
     @media screen and (min-width: $break-desktop-2) {
-        width: 70%;
+        width: 60%;
   }
     @media screen and (min-width: $break-desktop-3) {
         width: 50%;
@@ -362,24 +363,23 @@ p{
 }
 
 .proj-words{
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin: 60px 0 60px 0;
     @media screen and (min-width: $break-tablet) {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-  }
-    @media screen and (min-width: $break-tablet) {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        align-items: start;
+        margin: 100px 0 100px 0;
   }
     @media screen and (min-width: $break-desktop-2) {
-        grid-template-columns: 1fr 3fr;
+        margin: 140px 0 140px 0;
+  }
+    @media screen and (min-width: $break-desktop-3) {
+
   }
 }
 
 .proj-wrapper{
     margin-top: 30px;
+    img{
+        width: 100%;
+    }
 }
 
 .small-text{
@@ -395,35 +395,22 @@ p{
 .next-project{
     display: flex;
     margin-top: 120px;
+    @media screen and (min-width: $break-tablet) {
+        margin-top: 140px;
+  }
+    @media screen and (min-width: $break-desktop-2) {
+        margin-top: 180px;
+  }
+    @media screen and (min-width: $break-desktop-3) {
+
+  }
 }
 
 .next-project-name{
-    width: 40%;
+    width: 100%;
     @media screen and (min-width: $break-desktop) {
         width: 100%;
     }
-}
-
-.next-project-arrow{
-    padding-top: 8px;
-    width: 75px;
-    @media screen and (min-width: $break-tablet) {
-        padding-top: 16px;
-        width: 90px;
-    }
-    @media screen and (min-width: $break-desktop) {
-        margin-left: -500px;
-        padding-top: 24px;
-        width: 120px;
-    }
-    @media screen and (min-width: $break-desktop-2) {
-        margin-left: -900px;
-  }
-    @media screen and (min-width: $break-desktop-3) {
-        margin-left: -1300px;
-        padding-top: 30px;
-        width: 150px;
-  }
 }
 
 .videoWrapper {
@@ -822,16 +809,17 @@ p{
     visibility: hidden;
     z-index: 5;
     @media screen and (max-width: $break-tablet) {
-    margin-bottom: 60px;
+        margin: 0 0 60px 0;
   }
     @media screen and (max-width: $break-desktop) {
-    margin-bottom: 0;
+        margin-bottom: 0;
+        width: 100%;
   }
 }
 
 .follower {
-    width: 10rem;
-    height: 5rem;
+    width: 30rem;
+    height: 20rem;
     display: flex;
     position: absolute;
     left: 0;

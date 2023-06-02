@@ -178,7 +178,7 @@ function myFunction(x) {
 }
 
 AOS.init({
-    duration: 800,
+    duration: 300,
     offset: -300,
 });
 

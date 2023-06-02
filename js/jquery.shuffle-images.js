@@ -18,7 +18,7 @@
   var defaults = {
     trigger: "imageMouseMove",
     triggerTarget: false,
-    mouseMoveTrigger: 50,
+    mouseMoveTrigger: 500,
     hoverTrigger: 200,
     scrollTrigger: 100,
     target: "> img"
