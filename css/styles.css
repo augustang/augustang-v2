@@ -61,7 +61,7 @@ h1 {
   font-size: 12px;
   font-weight: normal;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   h1 {
     font-size: 14px;
   }
@@ -79,7 +79,7 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 0.03rem;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   h2 {
     font-size: 11px;
   }
@@ -96,7 +96,7 @@ h3 {
   font-weight: normal;
   line-height: 1;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   h3 {
     font-size: 100px;
   }
@@ -122,7 +122,7 @@ h5 {
   font-weight: normal;
   font-size: 14px;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   h5 {
     font-size: 16px;
   }
@@ -142,7 +142,7 @@ h6 {
   font-weight: normal;
   font-size: 18px;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   h6 {
     font-size: 24px;
   }
@@ -188,7 +188,7 @@ p {
   }
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .two-column {
     display: -ms-grid;
     display: grid;
@@ -204,7 +204,7 @@ p {
   position: relative;
   z-index: -10;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .thumbnail {
     margin-top: -50px;
   }
@@ -251,7 +251,7 @@ p {
   position: relative;
   z-index: -10;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .cover {
     margin-top: -50px;
   }
@@ -274,7 +274,7 @@ p {
 .padded {
   padding: 0 30px 0 30px;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .padded {
     padding: 0 45px 0 45px;
   }
@@ -327,7 +327,7 @@ p {
 .left-item {
   padding-right: 30px;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .left-item {
     padding-right: 120px;
   }
@@ -351,7 +351,7 @@ p {
 .right-item {
   padding-left: 30px;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .right-item {
     padding-left: 120px;
   }
@@ -389,7 +389,7 @@ p {
   line-height: 2.2;
   text-transform: uppercase;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .proj-categories {
     margin: 60px 0 120px 30px;
     padding-left: 90px;
@@ -420,19 +420,22 @@ p {
 }
 
 .proj-description p {
-  font-size: 30px;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 1.6;
   margin: 0 0 10px 0;
   width: 100%;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .proj-description p {
-    margin: 0 0 30px 0;
+    font-size: 20px;
+    width: 50%;
   }
 }
 @media screen and (min-width: 1500px) {
-  .proj-description {
-    width: 60%;
+  .proj-description p {
+    font-size: 30px;
+    line-height: 1.4;
+    margin: 0 0 30px 0;
   }
 }
 @media screen and (min-width: 2000px) {
@@ -444,7 +447,7 @@ p {
 .proj-words {
   margin: 60px 0 60px 0;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .proj-words {
     margin: 100px 0 100px 0;
   }
@@ -479,7 +482,7 @@ p {
   display: flex;
   margin-top: 120px;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .next-project {
     margin-top: 140px;
   }
@@ -501,7 +504,6 @@ p {
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 25px;
   height: 0;
 }
 
@@ -526,12 +528,12 @@ p {
   font-size: 30px;
   text-decoration: underline;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .webpage-link {
     font-size: 50px;
   }
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .webpage-link {
     font-size: 80px;
   }
@@ -564,7 +566,7 @@ p {
 .block {
   padding-top: 60px;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .block {
     display: -ms-grid;
     display: grid;
@@ -583,7 +585,7 @@ p {
 .block-items p {
   font-size: 10px;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .block-items p {
     font-size: 12px;
   }
@@ -796,7 +798,7 @@ p {
 .menu-window a {
   color: white;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .menu-window {
     -webkit-box-align: end;
         -ms-flex-align: end;
@@ -844,7 +846,7 @@ p {
 .big-link {
   padding-top: 60px;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .big-link {
     padding-top: 80px;
     margin-top: 0;
@@ -854,7 +856,7 @@ p {
   font-size: 50px;
   margin: 0;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .big-link h4 {
     font-size: 150px;
     line-height: 1.3;
@@ -869,7 +871,7 @@ p {
 .small-link {
   margin-bottom: 6em;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .small-link {
     margin-bottom: 1.2em;
   }
@@ -878,7 +880,7 @@ p {
   font-size: 16px;
   line-height: 2;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .small-link p {
     font-size: 14px;
     line-height: 2;
@@ -912,7 +914,7 @@ p {
 .footer-window a {
   color: white;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .footer-window {
     -webkit-box-align: end;
         -ms-flex-align: end;
@@ -947,7 +949,7 @@ p {
 .footer-big-link {
   padding-top: 80px;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .footer-big-link {
     padding-top: 80px;
     margin-top: 0;
@@ -957,7 +959,7 @@ p {
   font-size: 50px;
   margin: 0;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .footer-big-link h4 {
     font-size: 150px;
     line-height: 1.3;
@@ -972,7 +974,7 @@ p {
 .footer-small-link {
   margin-bottom: 2em;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .footer-small-link {
     margin-bottom: 3em;
   }
@@ -981,7 +983,7 @@ p {
   font-size: 16px;
   line-height: 2;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 820px) {
   .footer-small-link p {
     font-size: 14px;
     line-height: 2;
@@ -1023,7 +1025,7 @@ p {
   visibility: hidden;
   z-index: 5;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 820px) {
   .container {
     margin: 0 0 60px 0;
   }

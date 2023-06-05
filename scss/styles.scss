@@ -1,5 +1,5 @@
 $break-phone: 320px;
-$break-tablet: 850px;
+$break-tablet: 820px;
 $break-desktop: 1200px;
 $break-desktop-2: 1500px;
 $break-desktop-3: 2000px;
@@ -344,18 +344,23 @@ p{
 
 .proj-description{
     p{
-        font-size: 30px;
-        line-height: 1.4;
+        font-size: 16px;
+        line-height: 1.6;
         margin: 0 0 10px 0;
         width: 100%
     }
     @media screen and (min-width: $break-tablet) {
         p{
-        margin: 0 0 30px 0;
-    }
+            font-size: 20px;
+            width: 50%;
+        }
   }
     @media screen and (min-width: $break-desktop-2) {
-        width: 60%;
+        p{
+            font-size: 30px;
+            line-height: 1.4;
+            margin: 0 0 30px 0;
+        }
   }
     @media screen and (min-width: $break-desktop-3) {
         width: 50%;
@@ -416,7 +421,6 @@ p{
 .videoWrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
 	height: 0;
 }
 .videoWrapper iframe {
