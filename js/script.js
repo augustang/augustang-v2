@@ -177,8 +177,8 @@ function myFunction(x) {
   x.classList.toggle("change");
 }
 
-AOS.init({
+/*AOS.init({
     duration: 300,
     offset: -300,
-});
+});*/
 
