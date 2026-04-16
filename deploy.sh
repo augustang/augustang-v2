@@ -9,7 +9,7 @@ rsync -avz --delete \
   --exclude '.cursor' \
   --exclude 'scss' \
   --exclude 'prepros*' \
-  --exclude '.htaccess*' \
+  --exclude '.htaccess_*' \
   --exclude '.well-known' \
   --exclude 'cgi-bin' \
   --exclude 'deploy.sh' \
