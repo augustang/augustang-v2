@@ -16,6 +16,23 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 0;
 }
 
+:root {
+  --gutter: 30px;
+  --gutter-top: 30px;
+}
+@media screen and (min-width: 1500px) {
+  :root {
+    --gutter: 50px;
+    --gutter-top: 50px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  :root {
+    --gutter: 100px;
+    --gutter-top: 60px;
+  }
+}
+
 /* ========================================
    Fonts
    ======================================== */
@@ -170,16 +187,16 @@ p {
 
 .project-container {
   display: block;
-  margin: 30px 30px 120px 30px;
+  margin: 30px var(--gutter) 120px;
 }
 @media screen and (min-width: 1500px) {
   .project-container {
-    margin: 30px 100px 200px 100px;
+    margin-bottom: 200px;
   }
 }
 @media screen and (min-width: 2000px) {
   .project-container {
-    margin: 30px 200px 300px 200px;
+    margin-bottom: 300px;
   }
 }
 
@@ -274,41 +291,11 @@ p {
 }
 
 .padded {
-  padding: 0 30px;
-}
-@media screen and (min-width: 820px) {
-  .padded {
-    padding: 0 45px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .padded {
-    padding: 0 60px;
-  }
-}
-@media screen and (min-width: 1500px) {
-  .padded {
-    padding: 0 100px;
-  }
-}
-@media screen and (min-width: 2000px) {
-  .padded {
-    padding: 0 200px;
-  }
+  padding: 0 var(--gutter);
 }
 
 .padded-title {
-  padding: 0 0 0 30px;
-}
-@media screen and (min-width: 1500px) {
-  .padded-title {
-    padding: 0 0 0 100px;
-  }
-}
-@media screen and (min-width: 2000px) {
-  .padded-title {
-    padding: 0 0 0 200px;
-  }
+  padding: 0 0 0 var(--gutter);
 }
 
 .photo-grid {
@@ -526,16 +513,18 @@ p {
    ======================================== */
 
 .about-container {
-  margin: 30px 30px 120px 30px;
+  margin: 30px var(--gutter) 120px;
 }
 @media screen and (min-width: 1500px) {
   .about-container {
-    margin: 70px 100px 200px 100px;
+    margin-top: 70px;
+    margin-bottom: 200px;
   }
 }
 @media screen and (min-width: 2000px) {
   .about-container {
-    margin: 80px 200px 300px 200px;
+    margin-top: 80px;
+    margin-bottom: 300px;
   }
 }
 
@@ -632,7 +621,7 @@ p {
 .copyright-1 {
   display: none;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 820px) {
   .copyright-1 {
     display: block;
     color: white;
@@ -654,7 +643,7 @@ p {
   text-transform: uppercase;
   z-index: 42;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 820px) {
   .copyright-2 {
     display: none;
   }
@@ -694,31 +683,17 @@ p {
   height: 35px;
   justify-content: space-between;
   line-height: 35px;
-  padding-right: 30px;
-  margin: 30px;
+  padding: 0 var(--gutter);
   position: fixed;
-  top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
+  top: var(--gutter-top);
   z-index: 100;
   animation: menuFadeIn 0.8s ease-out 0.3s backwards;
 }
 
 @keyframes menuFadeIn {
   from { opacity: 0; }
-}
-@media screen and (min-width: 1500px) {
-  .menu {
-    padding-right: 70px;
-    padding-left: 70px;
-    margin-top: 50px;
-  }
-}
-@media screen and (min-width: 2000px) {
-  .menu {
-    padding-right: 170px;
-    padding-left: 170px;
-    margin-top: 60px;
-  }
 }
 
 .addwhite {
@@ -758,7 +733,6 @@ p {
 
 .nav {
   display: flex;
-  margin-right: 30px;
 }
 
 /* ========================================
@@ -772,7 +746,7 @@ p {
   justify-content: space-between;
   left: 0;
   margin: 0;
-  padding: 30px;
+  padding: 30px var(--gutter);
   position: fixed;
   top: 0;
   visibility: hidden;
@@ -793,16 +767,7 @@ p {
 }
 @media screen and (min-width: 1500px) {
   .menu-window {
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-bottom: 80px;
-  }
-}
-@media screen and (min-width: 2000px) {
-  .menu-window {
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-bottom: 100px;
+    padding-bottom: 40px;
   }
 }
 
@@ -843,7 +808,7 @@ p {
 }
 
 .small-link {
-  margin-bottom: 6em;
+  margin-bottom: 0;
 }
 @media screen and (min-width: 820px) {
   .small-link {
@@ -878,7 +843,7 @@ p {
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
-  padding: 30px;
+  padding: 30px var(--gutter);
   width: 100%;
   z-index: 40;
 }
@@ -895,16 +860,7 @@ p {
 }
 @media screen and (min-width: 1500px) {
   .footer-window {
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-bottom: 80px;
-  }
-}
-@media screen and (min-width: 2000px) {
-  .footer-window {
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-bottom: 100px;
+    padding-bottom: 40px;
   }
 }
 
@@ -934,11 +890,11 @@ p {
 }
 
 .footer-small-link {
-  margin-bottom: 2em;
+  margin-bottom: 0;
 }
 @media screen and (min-width: 820px) {
   .footer-small-link {
-    margin-bottom: 3em;
+    margin-bottom: 1em;
   }
 }
 .footer-small-link p {
