@@ -84,7 +84,7 @@ TweenMax.staggerTo('.container', 1.4, { autoAlpha: 1, y: 0, ease: Power2.easeOut
    Menu Animation
    ======================================== */
 
-TweenMax.set('.menu-window', { autoAlpha: 0, height: '100vh' });
+TweenMax.set('.menu-window', { autoAlpha: 0 });
 TweenMax.set('.menu-item', { autoAlpha: 0, y: 40 });
 TweenMax.set('.menu-item-2', { autoAlpha: 0, y: 40 });
 

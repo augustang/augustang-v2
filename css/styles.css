@@ -749,6 +749,7 @@ p {
   padding: 30px var(--gutter);
   position: fixed;
   top: 0;
+  bottom: 0;
   visibility: hidden;
   opacity: 0;
   width: 100%;
