@@ -84,13 +84,18 @@ TweenMax.staggerTo('.container', 1.4, { autoAlpha: 1, y: 0, ease: Power2.easeOut
    Menu Animation
    ======================================== */
 
-TweenMax.set('.menu-window', { autoAlpha: 0 });
+TweenMax.set('.menu-window', { opacity: 0 });
 TweenMax.set('.menu-item', { autoAlpha: 0, y: 40 });
 TweenMax.set('.menu-item-2', { autoAlpha: 0, y: 40 });
 
-var tl = new TimelineMax({ paused: true });
+var tl = new TimelineMax({
+  paused: true,
+  onReverseComplete: function() {
+    TweenMax.set('.menu-window', { pointerEvents: 'none' });
+  }
+});
 
-tl.to('.menu-window', 0.4, { autoAlpha: 1, ease: Power2.easeOut });
+tl.to('.menu-window', 0.4, { opacity: 1, ease: Power2.easeOut });
 tl.staggerTo('.menu-item', 0.6, { autoAlpha: 1, y: 0, ease: Power3.easeOut }, 0.1, '-=0.1');
 tl.staggerTo('.menu-item-2', 0.5, { autoAlpha: 1, y: 0, ease: Power3.easeOut }, 0.08, '-=0.5');
 
@@ -100,6 +105,7 @@ $('#menu-button').click(function() {
   if (!menuOpen) {
     $('#button').css("color", "white");
     $('#button').css("border", ".5px solid white");
+    TweenMax.set('.menu-window', { pointerEvents: 'auto' });
     tl.timeScale(1).play();
     menuOpen = true;
   } else {
