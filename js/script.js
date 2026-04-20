@@ -84,14 +84,14 @@ TweenMax.staggerTo('.container', 1.4, { autoAlpha: 1, y: 0, ease: Power2.easeOut
    Menu Animation
    ======================================== */
 
-TweenMax.set('.menu-window', { opacity: 0 });
+TweenMax.set('.menu-window', { opacity: 0, visibility: 'hidden' });
 TweenMax.set('.menu-item', { autoAlpha: 0, y: 40 });
 TweenMax.set('.menu-item-2', { autoAlpha: 0, y: 40 });
 
 var tl = new TimelineMax({
   paused: true,
   onReverseComplete: function() {
-    TweenMax.set('.menu-window', { pointerEvents: 'none' });
+    TweenMax.set('.menu-window', { visibility: 'hidden', pointerEvents: 'none' });
   }
 });
 
@@ -105,7 +105,7 @@ $('#menu-button').click(function() {
   if (!menuOpen) {
     $('#button').css("color", "white");
     $('#button').css("border", ".5px solid white");
-    TweenMax.set('.menu-window', { pointerEvents: 'auto' });
+    TweenMax.set('.menu-window', { visibility: 'visible', pointerEvents: 'auto' });
     tl.timeScale(1).play();
     menuOpen = true;
   } else {
