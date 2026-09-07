@@ -21,6 +21,8 @@ h1, h2, h3, h4, h5, h6, p {
   --gutter-top: 30px;
   --video-inset-y: calc(100 / 1440 * 100vw);
   --video-inset-x: calc(256 / 1440 * 100vw);
+  --video-2up-x: calc(100 / 1440 * 100vw);
+  --video-2up-gap: calc(40 / 1440 * 100vw);
 }
 @media screen and (min-width: 1500px) {
   :root {
@@ -525,6 +527,78 @@ p {
 
 @media screen and (min-width: 1200px) {
   .videoWrapper--inset video {
+    border-radius: 12px;
+  }
+}
+
+.videoWrapper--inset-flush-bottom video {
+  margin: var(--video-inset-y) var(--video-inset-x) 0;
+  border-radius: 4px 4px 0 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .videoWrapper--inset-flush-bottom video {
+    border-radius: 12px 12px 0 0;
+  }
+}
+
+.video2up {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--video-2up-gap);
+  background-color: #f5f5f5;
+}
+
+.video2up .videoWrapper--inset {
+  aspect-ratio: unset;
+}
+
+@media screen and (max-width: 1199px) {
+  .video2up {
+    padding: var(--video-inset-y) var(--video-inset-x);
+  }
+
+  .video2up .videoWrapper--inset video {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 819px) {
+  .video2up {
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1199px) {
+  .video2up {
+    gap: 64px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .video2up {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: var(--video-inset-y) max(0px, calc(var(--video-2up-x) - var(--gutter))) var(--video-inset-y);
+    gap: var(--video-2up-gap);
+  }
+
+  .video2up .videoWrapper--inset {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .video2up .videoWrapper--inset video {
+    width: 100%;
+    margin: 0;
+    border-radius: 4px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .video2up .videoWrapper--inset video {
     border-radius: 12px;
   }
 }

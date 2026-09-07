@@ -142,7 +142,40 @@ function myFunction(x) {
    Video Play / Pause Toggle
    ======================================== */
 
+document.querySelectorAll('.video2up').forEach(function(group) {
+  var videos = group.querySelectorAll('video');
+  var toggle = group.querySelector('.video-toggle');
+
+  if (!videos.length || !toggle) {
+    return;
+  }
+
+  toggle.addEventListener('click', function() {
+    var isPaused = Array.prototype.some.call(videos, function(video) {
+      return video.paused;
+    });
+
+    if (isPaused) {
+      Array.prototype.forEach.call(videos, function(video) {
+        video.play();
+      });
+      toggle.classList.remove('is-paused');
+      toggle.setAttribute('aria-label', 'Pause video');
+    } else {
+      Array.prototype.forEach.call(videos, function(video) {
+        video.pause();
+      });
+      toggle.classList.add('is-paused');
+      toggle.setAttribute('aria-label', 'Play video');
+    }
+  });
+});
+
 document.querySelectorAll('.videoWrapper').forEach(function(wrapper) {
+  if (wrapper.closest('.video2up')) {
+    return;
+  }
+
   var video = wrapper.querySelector('video');
   var toggle = wrapper.querySelector('.video-toggle');
 
