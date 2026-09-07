@@ -71,7 +71,14 @@
     
     <div class='padded bottom-space-2'>
         <div class="videoWrapper">
-            <iframe src="https://player.vimeo.com/video/831752432?h=73b3e17d97&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <video autoplay muted loop playsinline preload="metadata"
+                   poster="img/vital-sync/vitalsync_03.jpeg">
+                <source src="img/vital-sync/vitalsync-sizzle.webm" type="video/webm">
+                <source src="img/vital-sync/vitalsync-sizzle.mp4" type="video/mp4">
+            </video>
+            <button type="button" class="video-toggle" aria-label="Pause video">
+                <span class="video-toggle-icon" aria-hidden="true"></span>
+            </button>
         </div>
     </div>
     <div class='padded left-item right-item bottom-space'>

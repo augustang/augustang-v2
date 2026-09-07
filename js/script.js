@@ -137,3 +137,28 @@ if (JSON.parse(localStorage.getItem('tangy-enabled'))) {
 function myFunction(x) {
   x.classList.toggle("change");
 }
+
+/* ========================================
+   Video Play / Pause Toggle
+   ======================================== */
+
+document.querySelectorAll('.videoWrapper').forEach(function(wrapper) {
+  var video = wrapper.querySelector('video');
+  var toggle = wrapper.querySelector('.video-toggle');
+
+  if (!video || !toggle) {
+    return;
+  }
+
+  toggle.addEventListener('click', function() {
+    if (video.paused) {
+      video.play();
+      toggle.classList.remove('is-paused');
+      toggle.setAttribute('aria-label', 'Pause video');
+    } else {
+      video.pause();
+      toggle.classList.add('is-paused');
+      toggle.setAttribute('aria-label', 'Play video');
+    }
+  });
+});
