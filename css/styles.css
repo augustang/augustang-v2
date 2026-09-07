@@ -555,6 +555,11 @@ p {
 }
 
 @media screen and (max-width: 1199px) {
+  :root {
+    --video-inset-x: 56px;
+    --video-inset-y: 56px;
+  }
+
   .video2up {
     padding: var(--video-inset-y) var(--video-inset-x);
   }
@@ -562,6 +567,13 @@ p {
   .video2up .videoWrapper--inset video {
     width: 100%;
     margin: 0;
+  }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1199px) {
+  :root {
+    --video-inset-x: 72px;
+    --video-inset-y: 72px;
   }
 }
 
@@ -619,6 +631,13 @@ p {
   justify-content: center;
   mix-blend-mode: difference;
   transform: translateZ(0);
+}
+
+@media screen and (max-width: 1199px) {
+  .video-toggle {
+    right: 12px;
+    bottom: 12px;
+  }
 }
 
 .video-toggle-icon {
