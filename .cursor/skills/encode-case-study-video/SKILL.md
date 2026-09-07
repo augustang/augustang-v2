@@ -23,8 +23,9 @@ Heights are **even** (required for H.264). Ratio from source: `height = width ×
 |---|---|---|
 | `half` | **1440×898** | Nav, hero, general case studies |
 | `scroll` | **1152×718** | Long Squarespace scroll clips (smaller file) |
+| `showcase` | **1152×1080** | Tall Squarespace showcase grid (2880×2702 source) |
 
-For a custom width: `HEIGHT = round(width × 1796 / 2880)` — if odd, subtract 1.
+For a custom width: `HEIGHT = round(width × sourceHeight ÷ 2880)` — if odd, subtract 1. Wide clips use source height **1796**; showcase uses **2702**.
 
 ## Encode command
 
