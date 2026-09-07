@@ -555,11 +555,6 @@ p {
 }
 
 @media screen and (max-width: 1199px) {
-  :root {
-    --video-inset-x: 56px;
-    --video-inset-y: 56px;
-  }
-
   .video2up {
     padding: var(--video-inset-y) var(--video-inset-x);
   }
@@ -578,6 +573,11 @@ p {
 }
 
 @media screen and (max-width: 819px) {
+  :root {
+    --video-inset-x: 24px;
+    --video-inset-y: 80px;
+  }
+
   .video2up {
     gap: 40px;
   }
