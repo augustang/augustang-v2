@@ -19,15 +19,22 @@ h1, h2, h3, h4, h5, h6, p {
 :root {
   --gutter: 30px;
   --gutter-top: 30px;
+  --proj-block-space: 60px;
   --video-inset-y: calc(100 / 1440 * 100vw);
   --video-inset-x: calc(256 / 1440 * 100vw);
   --video-2up-x: calc(100 / 1440 * 100vw);
   --video-2up-gap: calc(40 / 1440 * 100vw);
 }
+@media screen and (min-width: 820px) {
+  :root {
+    --proj-block-space: 100px;
+  }
+}
 @media screen and (min-width: 1500px) {
   :root {
     --gutter: 50px;
     --gutter-top: 50px;
+    --proj-block-space: 140px;
   }
 }
 @media screen and (min-width: 2000px) {
@@ -434,17 +441,11 @@ p {
 }
 
 .proj-words {
-  margin: 60px 0;
+  margin: var(--proj-block-space) 0;
 }
-@media screen and (min-width: 820px) {
-  .proj-words {
-    margin: 100px 0;
-  }
-}
-@media screen and (min-width: 1500px) {
-  .proj-words {
-    margin: 140px 0;
-  }
+
+.proj-wrapper > .padded:has(.visit-site) {
+  margin-bottom: var(--proj-block-space);
 }
 
 .proj-wrapper {
@@ -454,6 +455,72 @@ p {
 .proj-wrapper video {
   width: 100%;
   max-width: 100%;
+}
+
+.proj-wrapper figure {
+  margin: 0;
+}
+
+/* Former full-bleed gallery blocks: use standard outer gutter at all breakpoints */
+.proj-wrapper > .bottom-space:not(.padded),
+.proj-wrapper > .bottom-space-2:not(.padded) {
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+/* Case study gallery: one outer gutter on mobile/tablet (match video gray box) */
+@media screen and (max-width: 1199px) {
+  .proj-wrapper .padded.left-item.right-item,
+  .proj-wrapper .padded.left-item:not(.right-item),
+  .proj-wrapper .padded.right-item:not(.left-item) {
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
+
+  .proj-wrapper > img.left-item:not(.padded),
+  .proj-wrapper > img.right-item:not(.padded) {
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+    box-sizing: border-box;
+  }
+}
+
+/* Desktop: restore asymmetric inset on padded gallery items */
+@media screen and (min-width: 1200px) {
+  .proj-wrapper .padded.left-item {
+    padding-right: 200px;
+  }
+
+  .proj-wrapper .padded.right-item {
+    padding-left: 200px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .proj-wrapper .padded.left-item {
+    padding-right: 300px;
+  }
+
+  .proj-wrapper .padded.right-item {
+    padding-left: 300px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .proj-wrapper .padded.left-item {
+    padding-right: 400px;
+  }
+
+  .proj-wrapper .padded.right-item {
+    padding-left: 400px;
+  }
+}
+
+@media screen and (max-width: 819px) {
+  .proj-wrapper .bottom-space:not(:has(.visit-site)),
+  .proj-wrapper .bottom-space-2 {
+    margin-bottom: 24px;
+  }
 }
 
 .small-text {
@@ -688,11 +755,8 @@ p {
 .visit-site {
   font-size: 12px;
   letter-spacing: 0.03rem;
-  margin: 0 0 120px 0;
+  margin: 0;
   text-transform: uppercase;
-}
-.padded:has(+ .padded .videoWrapper) .visit-site {
-  margin-bottom: 0;
 }
 
 .webpage-link {
