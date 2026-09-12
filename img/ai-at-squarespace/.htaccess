@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "AI at Squarespace"
+AuthUserFile /home2/haileytang/.htpasswd
+Require valid-user

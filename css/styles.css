@@ -310,6 +310,62 @@ p {
   padding: 0 0 0 var(--gutter);
 }
 
+/* ========================================
+   Utilities
+   ======================================== */
+
+.utility-description,
+.utility-description p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  width: 100%;
+}
+
+.two-col-text {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
+  width: 100%;
+}
+@media screen and (min-width: 820px) {
+  .two-col-text {
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .two-col-text {
+    width: 40%;
+  }
+}
+
+.auth-gate-page .menu {
+  mix-blend-mode: normal;
+}
+
+.auth-gate-page .menu h1 {
+  color: #000;
+}
+
+.auth-gate-note {
+  font-size: 12px;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+}
+
+.auth-gate-credential {
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 16px;
+}
+@media screen and (min-width: 820px) {
+  .auth-gate-credential {
+    font-size: 20px;
+  }
+}
+
 .photo-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

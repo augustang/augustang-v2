@@ -1,5 +1,15 @@
 RewriteEngine On
 
+# AI at Squarespace — password protected
+ErrorDocument 401 /ai-at-squarespace-auth.html
+
+<Files "ai-at-squarespace.html">
+  AuthType Basic
+  AuthName "AI at Squarespace"
+  AuthUserFile /home2/haileytang/.htpasswd
+  Require valid-user
+</Files>
+
 # Redirect index.html to root
 RewriteCond %{THE_REQUEST} /index\.html [NC]
 RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
