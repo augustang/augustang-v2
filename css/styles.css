@@ -525,6 +525,12 @@ p {
   width: 100%;
   text-wrap: pretty;
 }
+
+.proj-description .utility-description {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
 @media screen and (min-width: 820px) {
   .proj-description p {
     font-size: 20px;
