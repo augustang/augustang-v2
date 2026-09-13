@@ -1,0 +1,5 @@
+# Private case study — remove these Disallow lines when listing on the homepage.
+User-agent: *
+Disallow: /ai-at-squarespace
+Disallow: /ai-at-squarespace-auth
+Disallow: /img/ai-at-squarespace/
