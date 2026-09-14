@@ -212,6 +212,26 @@ p {
   }
 }
 
+.project-container h3 {
+  font-size: 120px;
+}
+
+@media screen and (min-width: 820px) and (max-width: 1999px) {
+  .project-container > .container {
+    margin-bottom: 18px;
+  }
+
+  .project-container > .container:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .project-container h3 {
+    font-size: 200px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .project-title {
     display: inline;
@@ -238,7 +258,7 @@ p {
     margin-top: -50px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 820px) {
   .thumbnail {
     display: none;
     padding-bottom: 0;
@@ -704,6 +724,10 @@ p {
 .videoWrapper--inset {
   aspect-ratio: unset;
   background-color: #f5f5f5;
+}
+
+.proj-wrapper--trading-dashboard .videoWrapper--inset {
+  background-color: #E9E8E4;
 }
 
 .videoWrapper--inset:not(:has(video)) {

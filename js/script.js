@@ -18,7 +18,7 @@ jQuery(function($) {
    Desktop Hover / Mobile Fallback
    ======================================== */
 
-if ($(window).width() > 960) {
+if ($(window).width() >= 820) {
   $("a.main").hover(function() {
     $(this).siblings("div").removeClass("hide-me");
   }, function() {
