@@ -710,6 +710,22 @@ p {
   aspect-ratio: 16 / 9;
 }
 
+.videoWrapper--inset.videoWrapper--shadow-stack {
+  overflow: visible;
+  padding: var(--video-inset-y) var(--video-inset-x);
+}
+
+.videoWrapper--inset.videoWrapper--shadow-stack video {
+  width: 100%;
+  margin: 0;
+  box-shadow:
+    0 108px 30px 0 rgba(0, 0, 0, 0),
+    0 69px 28px 0 rgba(0, 0, 0, 0.01),
+    0 39px 23px 0 rgba(0, 0, 0, 0.05),
+    0 17px 17px 0 rgba(0, 0, 0, 0.09),
+    0 4px 9px 0 rgba(0, 0, 0, 0.1);
+}
+
 .videoWrapper--inset video {
   position: relative;
   top: auto;
