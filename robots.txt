@@ -3,3 +3,4 @@ User-agent: *
 Disallow: /ai-at-squarespace
 Disallow: /ai-at-squarespace-auth
 Disallow: /img/ai-at-squarespace/
+Disallow: /archive/

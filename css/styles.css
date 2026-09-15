@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6, p {
   --gutter: 30px;
   --gutter-top: 30px;
   --proj-block-space: 60px;
+  --block-bottom-space: 40px;
   --video-inset-y: calc(100 / 1440 * 100vw);
   --video-inset-x: calc(256 / 1440 * 100vw);
   --video-2up-x: calc(100 / 1440 * 100vw);
@@ -28,6 +29,12 @@ h1, h2, h3, h4, h5, h6, p {
 @media screen and (min-width: 820px) {
   :root {
     --proj-block-space: 100px;
+    --block-bottom-space: var(--proj-block-space);
+  }
+}
+@media screen and (min-width: 1200px) {
+  :root {
+    --block-bottom-space: 100px;
   }
 }
 @media screen and (min-width: 1500px) {
@@ -35,6 +42,7 @@ h1, h2, h3, h4, h5, h6, p {
     --gutter: 50px;
     --gutter-top: 50px;
     --proj-block-space: 140px;
+    --block-bottom-space: 120px;
   }
 }
 @media screen and (min-width: 2000px) {
@@ -212,13 +220,13 @@ p {
   }
 }
 
-.project-container h3 {
-  font-size: 120px;
-}
+@media screen and (min-width: 820px) and (max-width: 1199px) {
+  .project-container h3 {
+    font-size: 120px;
+  }
 
-@media screen and (min-width: 820px) and (max-width: 1999px) {
   .project-container > .container {
-    margin-bottom: 18px;
+    margin-bottom: 32px;
   }
 
   .project-container > .container:last-child {
@@ -248,17 +256,32 @@ p {
 }
 
 .thumbnail {
-  padding-bottom: 80px;
+  padding-bottom: 48px;
   margin-top: -24px;
   position: relative;
   z-index: -10;
 }
-@media screen and (min-width: 820px) {
-  .thumbnail {
-    margin-top: -50px;
+@media screen and (max-width: 1199px) {
+  .project-container a.main {
+    position: relative;
+    z-index: 1;
+  }
+
+  .project-container .thumbnail {
+    padding-bottom: 48px;
   }
 }
-@media screen and (min-width: 820px) {
+@media screen and (max-width: 819px) {
+  .project-container .thumbnail {
+    margin-top: -16px;
+  }
+}
+@media screen and (min-width: 820px) and (max-width: 1199px) {
+  .project-container .thumbnail {
+    margin-top: -32px;
+  }
+}
+@media screen and (min-width: 1200px) {
   .thumbnail {
     display: none;
     padding-bottom: 0;
@@ -279,27 +302,7 @@ p {
 }
 
 .bottom-space {
-  margin-bottom: 40px;
-}
-@media screen and (min-width: 820px) {
-  .bottom-space {
-    margin-bottom: var(--proj-block-space);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .bottom-space {
-    margin-bottom: 100px;
-  }
-}
-@media screen and (min-width: 1500px) {
-  .bottom-space {
-    margin-bottom: 120px;
-  }
-}
-@media screen and (min-width: 2000px) {
-  .bottom-space {
-    margin-bottom: 120px;
-  }
+  margin-bottom: var(--block-bottom-space);
 }
 
 .cover {
@@ -307,9 +310,20 @@ p {
   position: relative;
   z-index: -10;
 }
-@media screen and (min-width: 820px) {
+@media screen and (max-width: 1199px) {
+  .padded-title {
+    position: relative;
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 819px) {
   .cover {
-    margin-top: -50px;
+    margin-top: -16px;
+  }
+}
+@media screen and (min-width: 820px) and (max-width: 1199px) {
+  .cover {
+    margin-top: -32px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -658,7 +672,6 @@ p {
 }
 
 @media screen and (max-width: 819px) {
-  .proj-wrapper .bottom-space:not(:has(.visit-site)),
   .proj-wrapper .bottom-space-2 {
     margin-bottom: 24px;
   }
@@ -667,27 +680,75 @@ p {
 .small-text {
   font-size: 12px;
   letter-spacing: 0.03rem;
-  margin: -120px 0 120px 0;
+  margin: 0;
   text-transform: uppercase;
-}
-@media screen and (min-width: 1200px) {
-  .small-text {
-    margin-top: -20px;
-  }
 }
 
 .next-project {
   display: flex;
-  margin-top: 120px;
+  flex-direction: column;
+  margin-top: 0;
+  padding-bottom: var(--block-bottom-space);
 }
-@media screen and (min-width: 820px) {
+
+@media screen and (max-width: 1199px) {
   .next-project {
-    margin-top: 140px;
+    padding-bottom: 100px;
   }
 }
-@media screen and (min-width: 1500px) {
+
+.next-project .thumbnail {
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  .next-project a.main {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 819px) {
+  .next-project .small-text {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .next-project .thumbnail {
+    margin-top: -16px;
+  }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1199px) {
+  .next-project .thumbnail {
+    margin-top: -32px;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .next-project .small-text {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .next-project {
-    margin-top: 180px;
+    gap: 32px;
+  }
+
+  .next-project .small-text {
+    margin-bottom: 0;
+  }
+
+  .next-project h3 {
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1199px) {
+  .next-project h3 {
+    font-size: 120px;
   }
 }
 

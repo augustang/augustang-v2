@@ -10,13 +10,31 @@ PORT = 8000
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
+ARCHIVE_REDIRECTS = {
+    "/traeger": "/archive/traeger",
+    "/mmb": "/archive/mmb",
+    "/emergence": "/archive/emergence",
+}
+
+
 class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=ROOT, **kwargs)
 
     def do_GET(self):
+        if self._apply_clean_url_rules():
+            super().do_GET()
+
+    def do_HEAD(self):
+        if self._apply_clean_url_rules():
+            super().do_HEAD()
+
+    def _apply_clean_url_rules(self):
         parsed = urlparse(self.path)
         path = parsed.path
+
+        if path in ARCHIVE_REDIRECTS:
+            return self._redirect(ARCHIVE_REDIRECTS[path], parsed)
 
         if path in ("/index.html", "/index.html/"):
             return self._redirect(self._clean_path("/"), parsed)
@@ -28,9 +46,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             html_path = os.path.join(ROOT, path.lstrip("/") + ".html")
             if os.path.isfile(html_path):
                 self.path = urlunparse(parsed._replace(path=path + ".html"))
-                return super().do_GET()
 
-        return super().do_GET()
+        return True
 
     def _clean_path(self, path):
         if path != "/" and path.endswith("/"):
