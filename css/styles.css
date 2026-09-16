@@ -19,8 +19,11 @@ h1, h2, h3, h4, h5, h6, p {
 :root {
   --gutter: 30px;
   --gutter-top: 30px;
-  --proj-block-space: 60px;
-  --block-bottom-space: 40px;
+  --proj-block-space: 80px;
+  --block-bottom-space: 80px;
+  --block-bottom-space-2: 24px;
+  --section-split-gap-top: calc(2 * var(--proj-block-space));
+  --section-split-gap-bottom: var(--block-bottom-space-2);
   --video-inset-y: calc(100 / 1440 * 100vw);
   --video-inset-x: calc(256 / 1440 * 100vw);
   --video-2up-x: calc(100 / 1440 * 100vw);
@@ -29,12 +32,14 @@ h1, h2, h3, h4, h5, h6, p {
 @media screen and (min-width: 820px) {
   :root {
     --proj-block-space: 100px;
-    --block-bottom-space: var(--proj-block-space);
+    --block-bottom-space: 100px;
+    --block-bottom-space-2: 32px;
   }
 }
 @media screen and (min-width: 1200px) {
   :root {
     --block-bottom-space: 100px;
+    --block-bottom-space-2: 50px;
   }
 }
 @media screen and (min-width: 1500px) {
@@ -43,12 +48,14 @@ h1, h2, h3, h4, h5, h6, p {
     --gutter-top: 50px;
     --proj-block-space: 140px;
     --block-bottom-space: 120px;
+    --block-bottom-space-2: 60px;
   }
 }
 @media screen and (min-width: 2000px) {
   :root {
     --gutter: 100px;
     --gutter-top: 60px;
+    --block-bottom-space-2: 80px;
   }
 }
 
@@ -358,7 +365,7 @@ p {
   justify-content: space-between;
   align-items: baseline;
   width: 100%;
-  margin: calc(2 * var(--proj-block-space)) 0 40px;
+  margin: var(--section-split-gap-top) 0 var(--section-split-gap-bottom);
   font-family: "MonumentGrotesk-Regular", "Helvetica", sans-serif;
   font-weight: normal;
   letter-spacing: -0.03rem;
@@ -670,6 +677,14 @@ p {
   padding-right: var(--gutter);
 }
 
+/* Standard case studies: uniform asset gaps on mobile/tablet */
+@media screen and (max-width: 1199px) {
+  .proj-wrapper:not(.proj-wrapper--ai-at-squarespace):not(.proj-wrapper--trading-dashboard) .bottom-space,
+  .proj-wrapper:not(.proj-wrapper--ai-at-squarespace):not(.proj-wrapper--trading-dashboard) .bottom-space-2 {
+    margin-bottom: var(--block-bottom-space-2);
+  }
+}
+
 /* Case study gallery: one outer gutter on mobile/tablet (match video gray box) */
 @media screen and (max-width: 1199px) {
   .proj-wrapper .padded.left-item.right-item,
@@ -715,12 +730,6 @@ p {
 
   .proj-wrapper .padded.right-item {
     padding-left: 400px;
-  }
-}
-
-@media screen and (max-width: 819px) {
-  .proj-wrapper .bottom-space-2 {
-    margin-bottom: 24px;
   }
 }
 
@@ -1099,22 +1108,11 @@ p {
 }
 
 .bottom-space-2 {
-  margin-bottom: 30px;
+  margin-bottom: var(--block-bottom-space-2);
 }
-@media screen and (min-width: 1200px) {
-  .bottom-space-2 {
-    margin-bottom: 50px;
-  }
-}
-@media screen and (min-width: 1500px) {
-  .bottom-space-2 {
-    margin-bottom: 60px;
-  }
-}
-@media screen and (min-width: 2000px) {
-  .bottom-space-2 {
-    margin-bottom: 80px;
-  }
+
+.section-split-title.bottom-space-2 {
+  margin-bottom: var(--block-bottom-space-2);
 }
 
 .item {
