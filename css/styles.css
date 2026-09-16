@@ -358,7 +358,7 @@ p {
   justify-content: space-between;
   align-items: baseline;
   width: 100%;
-  margin: var(--proj-block-space) 0 40px;
+  margin: calc(2 * var(--proj-block-space)) 0 40px;
   font-family: "MonumentGrotesk-Regular", "Helvetica", sans-serif;
   font-weight: normal;
   letter-spacing: -0.03rem;
