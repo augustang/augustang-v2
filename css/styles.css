@@ -358,10 +358,10 @@ p {
   justify-content: space-between;
   align-items: baseline;
   width: 100%;
-  margin: 0 0 var(--proj-block-space);
+  margin: var(--proj-block-space) 0 40px;
   font-family: "MonumentGrotesk-Regular", "Helvetica", sans-serif;
   font-weight: normal;
-  letter-spacing: 0.03rem;
+  letter-spacing: -0.03rem;
   font-size: 24px;
   line-height: 1;
 }
