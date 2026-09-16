@@ -599,6 +599,28 @@ p {
   margin: var(--proj-block-space) 0;
 }
 
+.cover + .proj-words {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 1200px) {
+  .cover + .proj-words {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .cover + .proj-words {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .cover + .proj-words {
+    margin-top: 80px;
+  }
+}
+
 .proj-wrapper > .padded:has(.visit-site) {
   margin-bottom: var(--proj-block-space);
 }
