@@ -20,9 +20,9 @@ jQuery(function($) {
 
 if ($(window).width() >= 820) {
   $("a.main").hover(function() {
-    $(this).siblings("div").removeClass("hide-me");
+    $(this).closest(".container").find(".follower").removeClass("hide-me");
   }, function() {
-    $(this).siblings("div").addClass("hide-me");
+    $(this).closest(".container").find(".follower").addClass("hide-me");
   });
 } else {
   $('.follower').addClass('hide-me');

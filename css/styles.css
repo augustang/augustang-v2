@@ -1075,7 +1075,27 @@ p {
 
 .about-content {
   padding-top: 1.8em;
-  height: 100vh;
+}
+
+.about-talk-entry {
+  width: 100%;
+  margin: 1.8em 0 var(--block-bottom-space);
+  visibility: visible;
+}
+
+.about-talk-entry h6 {
+  margin: 0;
+}
+
+.about-inline-link {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.about-talk-entry .main {
+  display: block;
+  color: inherit;
+  text-decoration: none;
 }
 
 .block {

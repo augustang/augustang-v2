@@ -10,9 +10,10 @@ PORT = 8000
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
-ARCHIVE_REDIRECTS = {
-    "/mmb": "/archive/mmb",
-    "/emergence": "/archive/emergence",
+REDIRECTS = {
+    "/gay": ("/archive/gay", ""),
+    "/mmb": ("/archive/mmb", ""),
+    "/emergence": ("/archive/emergence", ""),
 }
 
 
@@ -32,8 +33,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         parsed = urlparse(self.path)
         path = parsed.path
 
-        if path in ARCHIVE_REDIRECTS:
-            return self._redirect(ARCHIVE_REDIRECTS[path], parsed)
+        if path in REDIRECTS:
+            target_path, fragment = REDIRECTS[path]
+            return self._redirect(target_path, parsed, fragment)
 
         if path in ("/index.html", "/index.html/"):
             return self._redirect(self._clean_path("/"), parsed)
@@ -53,9 +55,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             path = path.rstrip("/")
         return path or "/"
 
-    def _redirect(self, path, parsed):
+    def _redirect(self, path, parsed, fragment=""):
         self.send_response(301)
-        self.send_header("Location", urlunparse(parsed._replace(path=path)))
+        self.send_header(
+            "Location",
+            urlunparse(parsed._replace(path=path, fragment=fragment)),
+        )
         self.end_headers()
 
 
