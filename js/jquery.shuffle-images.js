@@ -25,6 +25,14 @@
   };  
   
   
+  function advanceImage(el) {
+    var active = el.find("img.active");
+    var next = active.next().length > 0 ? active.next() : el.find("img:first-child");
+
+    next.addClass("active").show();
+    active.removeClass("active").hide();
+  }
+
   $.fn.shuffleImages = function(options){
     return this.each(function(){
       var settings = $.extend({}, defaults, options),
@@ -37,8 +45,8 @@
       
       el.addClass("si-container").find(settings.target).css({
         maxWidth: "100%"
-      }).not(":first-child").hide()
-      el.find("> img:first-child").addClass("active")
+      }).not(":first-child").hide();
+      el.find("> img:first-child").addClass("active");
       
       if (el.attr("data-si-mousemove-trigger")) mouseMoveTrigger = el.data("si-mousemove-trigger");
       
@@ -54,19 +62,7 @@
             
             
             if(Math.abs(parseInt(math) - prevLoc) > mouseMoveTrigger){
-
-              var active = el.find("img.active");
-
-              if (active.next().length > 0) {
-                active.next().addClass("active").show();
-                active.removeClass("active").hide();
-
-              } else {
-                el.find("img:first-child").addClass("active").show();
-                active.removeClass("active").hide();
-
-              }
-
+              advanceImage(el);
               prevLoc = parseInt(math);
             }
           });
@@ -75,17 +71,7 @@
           var triggerTime;
           triggerTarget.mouseover(function(e) {
             triggerTime = setInterval(function(){
-              var active = el.find("img.active");
-
-              if (active.next().length > 0) {
-                active.next().addClass("active").show();
-                active.removeClass("active").hide();
-
-              } else {
-                el.find("img:first-child").addClass("active").show();
-                active.removeClass("active").hide();
-
-              }
+              advanceImage(el);
             }, hoverTrigger);
           }).mouseout(function(e) {
             clearInterval(triggerTime);
@@ -97,19 +83,7 @@
             var math = Math.round(Math.sqrt(Math.pow(event.clientY, 2) +Math.pow(event.clientX, 2))) + 'px';
 
             if(Math.abs(parseInt(math) - prevLoc) > mouseMoveTrigger){
-
-              var active = el.find("img.active");
-
-              if (active.next().length > 0) {
-                active.next().addClass("active").show();
-                active.removeClass("active").hide();
-
-              } else {
-                el.find("img:first-child").addClass("active").show();
-                active.removeClass("active").hide();
-
-              }
-
+              advanceImage(el);
               prevLoc = parseInt(math);
             }
           });
@@ -120,19 +94,7 @@
             var math = $(document).scrollTop();
       
             if(Math.abs(parseInt(math) - prevLoc) > scrollTrigger){
-      
-              var active = el.find("img.active");
-      
-              if (active.next().length > 0) {
-                active.next().addClass("active").show();
-                active.removeClass("active").hide();
-      
-              } else {
-                el.find("img:first-child").addClass("active").show();
-                active.removeClass("active").hide();
-      
-              }
-      
+              advanceImage(el);
               prevLoc = parseInt($(document).scrollTop());
             }
           });

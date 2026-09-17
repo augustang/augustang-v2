@@ -36,7 +36,7 @@ if ($(window).width() >= 820) {
 $(".shuffle-me").shuffleImages({
   trigger: "imageMouseMove",
   triggerTarget: $(".main"),
-  mouseMoveTrigger: 40,
+  mouseMoveTrigger: 80,
   hoverTrigger: 200,
   scrollTrigger: 50,
   target: "> img"
