@@ -11,7 +11,6 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 ARCHIVE_REDIRECTS = {
-    "/traeger": "/archive/traeger",
     "/mmb": "/archive/mmb",
     "/emergence": "/archive/emergence",
 }

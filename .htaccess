@@ -1,7 +1,6 @@
 RewriteEngine On
 
 # Archived case studies
-RewriteRule ^traeger$ /archive/traeger [R=301,L]
 RewriteRule ^mmb$ /archive/mmb [R=301,L]
 RewriteRule ^emergence$ /archive/emergence [R=301,L]
 
