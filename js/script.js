@@ -36,40 +36,88 @@ if ($(window).width() >= 820) {
 $(".shuffle-me").shuffleImages({
   trigger: "imageMouseMove",
   triggerTarget: $(".main"),
-  mouseMoveTrigger: 15,
+  mouseMoveTrigger: 40,
   hoverTrigger: 200,
   scrollTrigger: 50,
   target: "> img"
 });
 
 /* ========================================
-   Cursor Follower
+   Cursor Follower (lerped)
    ======================================== */
 
-var parents = document.querySelectorAll('.container');
+var followerStates = [];
+var FOLLOWER_LERP = 0.055;
 
-function onMouseMove(e) {
-  var follower = this.querySelector('.follower');
-  TweenMax.to(follower, 0, {
-    x: e.offsetX,
-    y: e.offsetY,
-    ease: Power4.easeOut
-  });
+function syncFollowerPosition(state, x, y) {
+  state.targetX = x;
+  state.targetY = y;
+  state.currentX = x;
+  state.currentY = y;
+  TweenMax.set(state.follower, { x: x, y: y });
 }
 
-function init() {
-  for (var i = 0; i < parents.length; i++) {
-    parents[i].addEventListener('mousemove', onMouseMove);
+function initFollower(parent) {
+  var follower = parent.querySelector('.follower');
+  if (!follower) {
+    return;
   }
+
+  var state = {
+    follower: follower,
+    targetX: 0,
+    targetY: 0,
+    currentX: 0,
+    currentY: 0
+  };
+
+  parent.addEventListener('mouseenter', function(e) {
+    syncFollowerPosition(state, e.offsetX, e.offsetY);
+  });
+
+  parent.addEventListener('mousemove', function(e) {
+    state.targetX = e.offsetX;
+    state.targetY = e.offsetY;
+  });
+
+  followerStates.push(state);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+function tickFollowers() {
+  for (var i = 0; i < followerStates.length; i++) {
+    var state = followerStates[i];
+
+    if (state.follower.classList.contains('hide-me')) {
+      continue;
+    }
+
+    state.currentX += (state.targetX - state.currentX) * FOLLOWER_LERP;
+    state.currentY += (state.targetY - state.currentY) * FOLLOWER_LERP;
+
+    TweenMax.set(state.follower, {
+      x: state.currentX,
+      y: state.currentY
+    });
+  }
+
+  requestAnimationFrame(tickFollowers);
+}
+
+function initFollowers() {
+  var parents = document.querySelectorAll('.container');
+  for (var i = 0; i < parents.length; i++) {
+    initFollower(parents[i]);
+  }
+  requestAnimationFrame(tickFollowers);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
   window.onload = function() {
     TweenMax.set('.follower', {
       xPercent: -50,
       yPercent: -50
     });
-    init();
+    initFollowers();
   };
 });
 

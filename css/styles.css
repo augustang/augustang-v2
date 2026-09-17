@@ -1498,6 +1498,7 @@ p {
   left: 0;
   top: 0;
   pointer-events: none;
+  will-change: transform;
 }
 @media screen and (max-width: 320px) {
   .follower {
